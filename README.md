@@ -28,12 +28,13 @@ services:
 docker-compose up --build -d
 ```
 
-## Access Sitemap:
+## Access endpoint:
 
-[http://localhost:8000/sitemap](http://localhost:8000/sitemap)
+- sitemap: [http://localhost:8000/sitemap](http://localhost:8000/sitemap)
+- timeline: [http://localhost:8000/timeline](http://localhost:8000/timeline)
 
 
-## Example Sitemap Output
+### Example Sitemap Output
 
 Assuming `WIKIJS_BASE_URL=https://example.com`, the generated Sitemap might look like this:
 ```xml
@@ -58,4 +59,34 @@ Assuming `WIKIJS_BASE_URL=https://example.com`, the generated Sitemap might look
     <priority>0.8</priority>
   </url>
 </urlset>
+```
+
+### Example Timeline Output
+```json
+[
+  {
+    "id": 1,
+    "path": "home",
+    "locale": "zh",
+    "title": "Home",
+    "description": "",
+    "isPublished": true,
+    "isPrivate": false,
+    "createdAt": "2025-02-24T15:12:37.145Z",
+    "updatedAt": "2025-02-25T13:33:43.364Z",
+    "tags": []
+  },
+  {
+    "id": 3,
+    "path": "blog/2022/03/02/docker-compose-wordpress",
+    "locale": "zh",
+    "title": "docker-compose+wordpress: Build a Personal Blog in 30 Minutes",
+    "description": "",
+    "isPublished": true,
+    "isPrivate": false,
+    "createdAt": "2025-02-25T12:56:52.644Z",
+    "updatedAt": "2025-02-25T12:56:54.851Z",
+    "tags": ["wordpress", "blog", "docker"]
+  }
+]
 ```
