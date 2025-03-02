@@ -1,9 +1,9 @@
-# wikijs-sitemap-tool
+# wikijs-seo-tools
 
 ## Clone the respository
 ```bash
-git clone https://github.com/zivenyang/wikijs-sitemap-tool.git
-cd wikijs-sitemap-tool
+git clone https://github.com/zivenyang/wikijs-seo-tools.git
+cd wikijs-seo-tools
 ```
 
 ## Updated `docker-compose.yaml`
@@ -25,7 +25,7 @@ services:
 ## Build and Run
 
 ```bash
-docker-compose up --build
+docker-compose up --build -d
 ```
 
 ## Access Sitemap:
