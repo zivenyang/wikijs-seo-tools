@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  sitemap-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - WIKIJS_BASE_URL=https://example.com
+      - WIKIJS_API_URL=https://example.com/graphql
+      - WIKIJS_API_TOKEN=your-api-token
