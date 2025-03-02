@@ -101,6 +101,13 @@ async def generate_sitemap():
     xml_content = build_sitemap_xml(WIKIJS_BASE_URL, pages)
     return Response(content=xml_content, media_type="application/xml")
 
+# Timeline endpoint returning raw published pages from GraphQL
+@app.get("/timeline")
+async def get_timeline():
+    pages = await get_pages()
+    published_pages = [page for page in pages if page["isPublished"] and not page["isPrivate"]]
+    return published_pages
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
