@@ -90,3 +90,6 @@ Assuming `WIKIJS_BASE_URL=https://example.com`, the generated Sitemap might look
   }
 ]
 ```
+
+## How to use Timeline？  
+https://github.com/zivenyang/wikijs-seo-tools/issues/2#issuecomment-3092375410
